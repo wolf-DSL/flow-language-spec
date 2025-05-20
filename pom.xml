@@ -1,0 +1,118 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.intuit.dsl.flow</groupId>
+	<version>11.0.22-SNAPSHOT</version>
+	<artifactId>csm-language</artifactId>
+	<packaging>pom</packaging>
+	<scm>
+		<connection>scm:git:https://github.com/wolf-DSL/flow-language-spec.git</connection>
+		<url>https://github.com/wolf-DSL/flow-language-spec</url>
+		<tag>HEAD</tag>
+	</scm>
+	<properties>
+		<xtextVersion>2.30.0</xtextVersion>
+		<maven.javadoc.skip>true</maven.javadoc.skip>
+		<maven.compiler.source>11</maven.compiler.source>
+		<maven.compiler.target>11</maven.compiler.target>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+	<modules>
+		<module>com.intuit.dsl.flow.parent</module>
+	</modules>
+	
+	<repositories>
+		<repository>
+			<id>codehaus-snapshots</id>
+			<name>disable dead 'Codehaus Snapshots' repository, see https://bugs.eclipse.org/bugs/show_bug.cgi?id=481478</name>
+			<url>http://nexus.codehaus.org/snapshots/</url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+		<!-- This must be disabled explicitly, otherwise it is enabled by https://github.com/mojohaus/mojo-parent
+			which is taken from exec-maven-plugin from at least version 1.6.0 -->
+		<repository>
+			<id>ossrh-snapshots</id>
+			<name>ossrh-snapshots</name>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+			<url>http://oss.sonatype.org/content/repositories/snapshots</url>
+		</repository>
+		<!-- This is enabled by /org/sonatype/oss/oss-parent/7 used as parent by
+			org/xtext/antlr-generator/3.2.1 -->
+		<repository>
+			<id>sonatype-nexus-snapshots</id>
+			<name>Sonatype Nexus Snapshots</name>
+			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+		
+	</repositories>
+	<pluginRepositories>
+		 <pluginRepository>
+			<id>codehaus-snapshots</id>
+			<name>disable dead 'Codehaus Snapshots' repository, see https://bugs.eclipse.org/bugs/show_bug.cgi?id=481478</name>
+			<url>http://nexus.codehaus.org/snapshots/</url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</pluginRepository>
+		<pluginRepository>
+			<id>ossrh-snapshots</id>
+			<name>ossrh-snapshots</name>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+			<url>http://oss.sonatype.org/content/repositories/snapshots</url>
+		</pluginRepository>
+		<pluginRepository>
+			<id>sonatype-nexus-snapshots</id>
+			<name>Sonatype Nexus Snapshots</name>
+			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</pluginRepository>
+		
+	</pluginRepositories>
+
+    <!-- Repositories to download remote dependencies -->
+   
+	<!-- <distributionManagement>
+		<snapshotRepository>
+			<uniqueVersion>false</uniqueVersion>
+			<id>scm.dev.snap.repo</id>
+			<name>SNAPSHOT REPO</name>
+			<url>${snapshotdeployrepo}</url>
+			<layout>default</layout>
+		</snapshotRepository>
+		<repository>
+			<id>scm.int.rel.repo</id>
+			<name>RELEASE REPO</name>
+			<url>${releasedeployrepo}</url>
+			<layout>default</layout>
+		</repository>
+	</distributionManagement> -->
+</project>
+

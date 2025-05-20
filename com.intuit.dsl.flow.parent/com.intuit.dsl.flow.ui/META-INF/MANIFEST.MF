@@ -1,0 +1,26 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: com.intuit.dsl.flow.ui
+Bundle-ManifestVersion: 2
+Bundle-Name: com.intuit.dsl.flow.ui
+Bundle-Vendor: Intuit
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: com.intuit.dsl.flow.ui; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: com.intuit.dsl.flow,
+ com.intuit.dsl.flow.ide,
+ com.intuit.graphql,
+ com.intuit.graphql.ui,
+ org.eclipse.xtext.ui,
+ org.eclipse.xtext.ui.shared,
+ org.eclipse.xtext.ui.codetemplates.ui,
+ org.eclipse.ui.editors;bundle-version="3.14.300",
+ org.eclipse.ui.ide;bundle-version="3.18.500",
+ org.eclipse.ui,
+ org.eclipse.compare,
+ org.eclipse.xtext.builder
+Import-Package: org.apache.log4j
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Export-Package: com.intuit.dsl.flow.ui.quickfix,
+ com.intuit.dsl.flow.ui.internal,
+ com.intuit.dsl.flow.ui.contentassist
+Bundle-Activator: com.intuit.dsl.flow.ui.internal.FlowActivator
